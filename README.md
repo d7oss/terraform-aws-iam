@@ -5,7 +5,7 @@ Make it easier to handle users and permissions in AWS.
 
 ## Available modules
 
-### //modules/user
+### d7oss/iam/aws//user
 
 An IAM user.
 
@@ -13,7 +13,7 @@ Can be a web console user or CLI only, or both.
 
 ```hcl
 module "aws_system_users" {
-  source = "d7oss/terraform-aws-iam//user"
+  source = "d7oss/iam/aws//user"
   version = "~> 1.0"  # >= 1.0.0, < 2.0.0
 
   for_each = toset([
@@ -36,7 +36,7 @@ module "aws_system_users" {
 
 ```hcl
 module "aws_console_users" {
-  source = "d7oss/terraform-aws-iam//user"
+  source = "d7oss/iam/aws//user"
   version = "~> 1.0"  # >= 1.0.0, < 2.0.0
 
   for_each = {
