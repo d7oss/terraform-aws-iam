@@ -1,3 +1,8 @@
+output "arn" {
+  value = aws_iam_user.main.arn
+  description = "The ARN of the user."
+}
+
 output "password" {
   value = one(aws_iam_user_login_profile.main[*].password)
   description = "The password in plain text."
